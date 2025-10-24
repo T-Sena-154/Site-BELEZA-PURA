@@ -14,7 +14,11 @@ body {
     background-attachment: fixed;
     color: #000000;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Estilos para o cabeçalho */
