@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Corpo */
+body {
+    background: url('../imagens/estetica.png') center/cover fixed no-repeat;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #9600b4;
+}
+
+header h1 {
+    color: #9600b4;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #9600bE;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #9600bE;
+    color: #000;
+}
+
+/* Submenu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #7a7a7a;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a:hover {
+    background-color: #9600bE;
+    color: #000;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(7, 7, 7, 0.15);
+}
+
+h2 {
+    font-size: 2em;
+    color: #9600bE;
+    border-bottom: 2px solid #9600bE;
+    display: inline-block;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+/* --- Procedimentos --- */
+.procedures {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-shadow: 1px 1px 1px #000000;
+}
+ 
+.procedures h2 {
+    width: 100%;                   
+    margin-bottom: 16px;
+    font-size: 2em;
+    color: #9600bE;
+    border-bottom: 2px solid #9600bE;
+    padding-bottom: 5px;
+}
+
+.procedures ul  {
+    color: #9600bE;
+}
+
+.procedures p  {
+    color: #9600bE;
+}
+
+.procedures-list {
+    flex: 1 1 auto;
+    list-style: disc inside;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.procedures-list li {
+    margin-bottom: 10px;
+}
+
+/* Imagem à direita */
+.procedures-img {
+    flex: 0 0 auto;
+    width: 300px;
+    max-width: 35%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 10px 14px rgba(150, 0, 190, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.procedures-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(150, 0, 190, 0.3);
+}
+
+/* --- Profissionais --- */
+.professional-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #9600bE;
+    background-color: #000;
+}
+
+.professional-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.professional-card h3 {
+    color: #9600bE;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.professional-card p {
+    color: #000;
+    font-size: 1.1em;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    color: #9600bE;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #9600bE;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #050505;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .procedures {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .procedures-img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .professional-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .professional-card img {
+        margin-bottom: 10px;
+    }
+}
